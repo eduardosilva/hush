@@ -1,0 +1,9 @@
+{
+    "delay": "0",
+    "execMap": {
+        "ts": "ts-node-dev -r tsconfig-paths/register"
+    },
+    "events": {
+        "start": "yarn eslint src/**/*.ts"
+    }
+}

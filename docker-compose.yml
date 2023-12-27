@@ -1,0 +1,17 @@
+version: '2'
+services:
+  hush-db:
+    container_name: hush-db
+    image: docker.io/bitnami/postgresql:15.3.0
+    restart: always
+    environment:
+      - POSTGRESQL_USERNAME=postgres
+      - POSTGRESQL_PASSWORD=postgres
+      - POSTGRESQL_DATABASE=hush-db
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'hush_db_data:/bitnami/postgresql'
+
+volumes:
+  hush_db_data:
